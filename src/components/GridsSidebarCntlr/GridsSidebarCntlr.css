@@ -72,11 +72,11 @@ p{
     }
     .sidebar-cntlr{
         position: static;
-        width: 50%;
+        width: 100%;
     }
     .grids-cntlr{
         order: 2;
-        margin-top: 50px;
+        margin-top: 20px;
         padding: 0;
     }
     .title-cntlr-desk{
@@ -85,5 +85,8 @@ p{
     .cntlr{
         padding-right: 20px;
         padding-top: 50px;
+    }
+    .grids-cntlr{
+        justify-content: center;
     }
 }
