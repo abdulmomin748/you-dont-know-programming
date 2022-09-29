@@ -73,6 +73,8 @@ p{
     .sidebar-cntlr{
         position: static;
         width: 100%;
+        max-width: 500px;
+        margin: auto;
     }
     .grids-cntlr{
         order: 2;

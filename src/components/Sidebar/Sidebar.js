@@ -5,9 +5,13 @@ import './Sidebar.css';
 import profileImg from '../../images/profile.jpg';
 
 
-const Sidebar = ({getSomething}) => {
+
+const Sidebar = ({learningTimes}) => {
     // console.log(props.getSomething);
-   
+   const [breakTimes,setBreakTimes] = useState(0);
+   const getBreakTime = (e) => {
+    setBreakTimes(e)
+   }
     return (
         <div className='sidebar-cntlr'>
             <div className='sidebar-innr'>
@@ -43,20 +47,20 @@ const Sidebar = ({getSomething}) => {
                 <div className='break-cntlr'>
                     <h4>Add A Break</h4>
                     <div className='add-break'>
-                        <button>10m</button>
-                        <button>20m</button>
-                        <button>40m</button>
-                        <button>50m</button>
+                        <button onClick={() => getBreakTime('10')}> 10m</button>
+                        <button onClick={() => getBreakTime('20')}> 20m</button>
+                        <button onClick={() => getBreakTime('30')}> 30m</button>
+                        <button onClick={() => getBreakTime('40')}> 40m</button>
                     </div>
                 </div>
                 <div className='exercise-details'>
                     <h4>Learning Details</h4>
                     <div className='exercise-inr'>
                         <div className='ex-row'>
-                            <p>Learning time: <span>{getSomething} miniutes</span></p>
+                            <p>Learning time: <span>{learningTimes} miniutes</span></p>
                         </div>
                         <div className='ex-row'>
-                            <p>Break time: <span><span id='learning-time'> 0 </span>miniutes</span></p>
+                            <p>Break time: <span><span id='learning-time'> {breakTimes} </span>miniutes</span></p>
                         </div>
                     </div>
                 </div>

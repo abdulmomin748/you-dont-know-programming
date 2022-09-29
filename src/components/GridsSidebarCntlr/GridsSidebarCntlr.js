@@ -13,14 +13,14 @@ const GridsSidebarCntlr = () => {
         .then(data => setLanguages(data))
     },[]);
 
-     const [learningTimes, setLearningTimes] = useState(0);
+    const [learningTimes, setLearningTimes] = useState(0);
     const getTime = (props) => {
         const updataTime = learningTimes + props
         setLearningTimes(updataTime);
     }
     
 
-
+    
 
     return (
             
@@ -37,7 +37,7 @@ const GridsSidebarCntlr = () => {
                     }
                     </div>
                     
-                    <Sidebar getSomething={learningTimes}></Sidebar>
+                    <Sidebar learningTimes={learningTimes}></Sidebar>
                     <Title2></Title2>
                 </div>
                 
