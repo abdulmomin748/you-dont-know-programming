@@ -1,0 +1,84 @@
+.sidebar-cntlr{
+    width: 25%;
+    background-color: #fff;
+    padding: 30px 20px;
+}
+.sidebar-innr{
+    position: sticky;
+    top: 20px;
+}
+
+.profile-img img {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+.n-title{
+    margin-bottom: 5px;
+}
+.p-rgt{
+    margin-left: 20px;
+}
+.profile-cntlr {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.learning-secret{
+   
+}
+.persentage{
+    display: flex;
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding: 10px 15px;
+    justify-content: space-between;
+
+}
+.lprogress{
+    margin-bottom: 20px;
+}
+.add-break button{
+    background-color: #fff;
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 0;
+    font-weight: 600;
+}
+.add-break {
+    display: flex;
+    justify-content: space-evenly;
+    background: gainsboro;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.break-cntlr{
+    margin-top: 30px;
+}
+.exercise-details{
+    margin-top: 70px;
+}
+.ex-row {
+    background: gainsboro;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.ex-row p{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(46, 45, 45);
+    font-weight: 500;
+}
+.ex-row p span {
+    color: #495e7e;
+    font-weight: 400;
+}

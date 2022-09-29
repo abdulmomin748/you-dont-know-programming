@@ -1,11 +1,11 @@
 import React from 'react';
 import GridItem from '../GridItem/GridItem';
-
+import './Grids.css'
 const Grids = () => {
     return (
-        <div className='grids-cntlr'>
+        <>
             <GridItem></GridItem>
-        </div>
+        </>
     );
 };
 
