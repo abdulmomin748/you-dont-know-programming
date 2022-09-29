@@ -33,7 +33,7 @@
 }
 .persentage{
     display: flex;
-    background-color: gainsboro;
+    background-color: rgb(235 234 232 / 68%);
     border-radius: 5px;
     padding: 10px 15px;
     justify-content: space-between;
@@ -57,7 +57,7 @@
 .add-break {
     display: flex;
     justify-content: space-evenly;
-    background: gainsboro;
+    background: rgb(235 234 232 / 68%);
     margin-top: 20px;
     border-radius: 5px;
     padding: 10px 0;
@@ -69,7 +69,7 @@
     margin-top: 70px;
 }
 .ex-row {
-    background: gainsboro;
+    background: rgb(235 234 232 / 68%);
     padding: 20px;
     margin-top: 10px;
     border-radius: 5px;

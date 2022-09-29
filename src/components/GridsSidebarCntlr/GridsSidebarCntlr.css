@@ -12,4 +12,78 @@
 }
 .card img{
     height: 160px;
+    border-radius: 10px;
+}
+br{
+    display: none;
+}
+p{
+    font-weight: 600;
+}
+@media screen and (max-width: 1200px){
+    .grids-cntlr{
+        padding-right: 20px;
+        grid-template-columns: repeat(2,320px);
+        justify-content: left;
+        gap: 15px;
+        width: 70%;
+    }
+    .sidebar-cntlr{
+        width: 30%;
+    }
+    .cntlr{
+        padding-left: 20px;
+    }
+    .n-title{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    .grids-cntlr{
+        grid-template-columns: repeat(2,320px);
+        
+    }
+    
+}
+@media screen and (max-width: 992px){
+    .grids-cntlr{
+        grid-template-columns: repeat(1,320px);
+        
+    }
+    .sidebar-cntlr{
+        width: 40%;
+    }
+    br{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .persentage{
+        display: block;
+    }
+}
+@media screen and (max-width: 768px){
+    .grids-sidebar-cntlr{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar-cntlr{
+        position: static;
+        width: 50%;
+    }
+    .grids-cntlr{
+        order: 2;
+        margin-top: 50px;
+        padding: 0;
+    }
+    .title-cntlr-desk{
+        display: none;
+    }
+    .cntlr{
+        padding-right: 20px;
+        padding-top: 50px;
+    }
 }

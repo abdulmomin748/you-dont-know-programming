@@ -1,0 +1,9 @@
+.title-cntlr-phone{
+    display: none;
+    padding-top: 50px;
+}
+@media screen and (max-width: 768px){
+    .title-cntlr-phone{
+        display: block;
+    }
+}

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { faArrowRight, faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Sidebar.css';
 import profileImg from '../../images/profile.jpg';
 
-const Sidebar = () => {
+
+const Sidebar = ({getSomething}) => {
+    // console.log(props.getSomething);
+   
     return (
         <div className='sidebar-cntlr'>
             <div className='sidebar-innr'>
@@ -50,7 +53,7 @@ const Sidebar = () => {
                     <h4>Learning Details</h4>
                     <div className='exercise-inr'>
                         <div className='ex-row'>
-                            <p>Exercise time: <span><span id='learning-time'> 0 </span>miniutes</span></p>
+                            <p>Learning time: <span>{getSomething} miniutes</span></p>
                         </div>
                         <div className='ex-row'>
                             <p>Break time: <span><span id='learning-time'> 0 </span>miniutes</span></p>
