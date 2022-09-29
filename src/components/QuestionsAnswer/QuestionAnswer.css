@@ -4,6 +4,9 @@
     margin-top: 50px;
     margin-bottom: 80px;
 }
+.accordion-body p{
+    font-size: 20px;
+}
 @media screen and (max-width: 1199px){
     .question-container{
         padding-left: 20px;
