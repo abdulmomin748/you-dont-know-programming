@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import GridItem from '../GridItem/GridItem';
+import QuestionAnswer from '../QuestionsAnswer/QuestionAnswer';
 import Sidebar from '../Sidebar/Sidebar';
 import Title from '../Title/Title';
 import Title2 from '../Title2/Title2';
@@ -24,24 +25,27 @@ const GridsSidebarCntlr = () => {
 
     return (
             
-            <div className='cntlr'>
+            <>
+                <div className='cntlr'>
                 <Title></Title>
-                <div className='grids-sidebar-cntlr d-flex'>
-                    <div className='grids-cntlr d-grid'>
-                    {
-                        languages.map(language => <GridItem 
-                            key={language.id}
-                            language ={language}
-                            getTime = {getTime}
-                        ></GridItem>)
-                    }
+                    <div className='grids-sidebar-cntlr d-flex'>
+                        <div className='grids-cntlr d-grid'>
+                        {
+                            languages.map(language => <GridItem 
+                                key={language.id}
+                                language ={language}
+                                getTime = {getTime}
+                            ></GridItem>)
+                        }
+                        </div>
+                        
+                        <Sidebar learningTimes={learningTimes}></Sidebar>
+                        <Title2></Title2>
                     </div>
-                    
-                    <Sidebar learningTimes={learningTimes}></Sidebar>
-                    <Title2></Title2>
-                </div>
                 
-            </div>
+                </div>
+                <QuestionAnswer></QuestionAnswer>
+            </>
     );
 };
 
