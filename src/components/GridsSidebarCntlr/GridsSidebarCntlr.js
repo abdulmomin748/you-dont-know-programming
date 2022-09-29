@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Grids from '../Grids/Grids';
+import GridItem from '../GridItem/GridItem';
 import Sidebar from '../Sidebar/Sidebar';
-import './GridsSidebarCntlr.css'
+import Title from '../Title/Title';
+import './GridsSidebarCntlr.css';
+
 const GridsSidebarCntlr = () => {
     const [languages, setLanguages] = useState([]);
     useEffect(() => {
@@ -11,20 +13,20 @@ const GridsSidebarCntlr = () => {
     },[]);
 
     return (
-        <div className='grids-sidebar-cntlr d-flex'>
-           
-            <div className='grids-cntlr'>
-            {
-                languages.map(language => <Grids
-                key={language.id}
-                language ={language}
-                ></Grids>)
-            }
-            </div>
             
-                <Sidebar></Sidebar>
+            <div className='cntlr'>
+                <Title></Title>
+                <div className='grids-sidebar-cntlr d-flex'>
+                    <div className='grids-cntlr d-grid'>
+                    {
+                        languages.map(language => <GridItem key={language.id} language ={language}
+                        ></GridItem>)
+                    }
+                    </div>
+                    <Sidebar></Sidebar>
+                </div>
 
-        </div>
+            </div>
     );
 };
 

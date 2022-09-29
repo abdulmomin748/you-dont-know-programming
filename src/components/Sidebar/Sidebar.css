@@ -1,7 +1,10 @@
-.sidebar-cntlr{
+.sidebar-cntlr {
     width: 25%;
     background-color: #fff;
     padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 .sidebar-innr{
     position: sticky;
@@ -21,7 +24,7 @@
 }
 .profile-cntlr {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     margin-bottom: 20px;
 }
 
@@ -81,4 +84,7 @@
 .ex-row p span {
     color: #495e7e;
     font-weight: 400;
+}
+.complete-btn{
+    padding: 10px 15px;
 }

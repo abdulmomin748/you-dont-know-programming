@@ -2,7 +2,8 @@ import React from 'react';
 import { faArrowRight, faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Sidebar.css';
-import profileImg from '../../images/profile.jpg'
+import profileImg from '../../images/profile.jpg';
+
 const Sidebar = () => {
     return (
         <div className='sidebar-cntlr'>
@@ -14,7 +15,7 @@ const Sidebar = () => {
                     <div className='p-rgt'>
                         <h5 className='n-title'>Md Abdul Momin</h5>
                         <p>
-                            <FontAwesomeIcon icon={faDeleteLeft}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon="fa-solid fa-location-dot" />
                             Thakurgaon, Rangpur
                         </p>
                     </div>
@@ -56,7 +57,7 @@ const Sidebar = () => {
                         </div>
                     </div>
                 </div>
-                <button className='complete-btn btn btn-primary w-full'>Activity Completed</button>
+                <button className='complete-btn btn btn-primary w-100 mt-5'>Activity Completed</button>
             </div>
         </div>
     );
