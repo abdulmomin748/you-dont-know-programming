@@ -3,7 +3,8 @@ import { faArrowRight, faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Sidebar.css';
 import profileImg from '../../images/profile.jpg';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Sidebar = ({learningTimes}) => {
@@ -12,6 +13,13 @@ const Sidebar = ({learningTimes}) => {
    const getBreakTime = (e) => {
     setBreakTimes(e)
    }
+
+   const notify = () => {
+        toast.success('😃 You are done!',{
+            position: 'top-center'
+        })
+    }
+
     return (
         <div className='sidebar-cntlr'>
             <div className='sidebar-innr'>
@@ -64,7 +72,8 @@ const Sidebar = ({learningTimes}) => {
                         </div>
                     </div>
                 </div>
-                <button className='complete-btn btn btn-primary w-100 mt-5'>Activity Completed</button>
+                <button className='complete-btn btn btn-primary w-100 mt-5' onClick={notify}>Activity Completed</button>
+                <ToastContainer />
             </div>
         </div>
     );

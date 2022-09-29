@@ -5,6 +5,7 @@ import Title from '../Title/Title';
 import Title2 from '../Title2/Title2';
 import './GridsSidebarCntlr.css';
 
+
 const GridsSidebarCntlr = () => {
     const [languages, setLanguages] = useState([]);
     useEffect(() => {
@@ -19,7 +20,6 @@ const GridsSidebarCntlr = () => {
         setLearningTimes(updataTime);
     }
     
-
     
 
     return (
