@@ -88,3 +88,7 @@
 .complete-btn{
     padding: 10px 15px;
 }
+.add-break button:focus{
+    background-color: #0d6efd;
+    color: #fff;
+}

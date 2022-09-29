@@ -1,24 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { faArrowRight, faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Sidebar.css';
 import profileImg from '../../images/profile.jpg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import { addToDb } from '../../utilities/fakedb';
 
 
 const Sidebar = ({learningTimes}) => {
     // console.log(props.getSomething);
-   const [breakTimes,setBreakTimes] = useState(0);
-   const getBreakTime = (e) => {
-    setBreakTimes(e)
-   }
-
+   const [breakTimes, setBreakTimes] = useState(0);
+   
    const notify = () => {
         toast.success('😃 You are done!',{
             position: 'top-center'
         })
     }
+
+    const getTime = time => {
+        localStorage.setItem('time', time);
+        setBreakTimes(time);
+    }
+    useEffect(() => {
+        const storedTime = localStorage.getItem('time');
+        setBreakTimes(storedTime);
+    },[])
+
+
 
     return (
         <div className='sidebar-cntlr'>
@@ -55,10 +64,10 @@ const Sidebar = ({learningTimes}) => {
                 <div className='break-cntlr'>
                     <h4>Add A Break</h4>
                     <div className='add-break'>
-                        <button onClick={() => getBreakTime('10')}> 10m</button>
-                        <button onClick={() => getBreakTime('20')}> 20m</button>
-                        <button onClick={() => getBreakTime('30')}> 30m</button>
-                        <button onClick={() => getBreakTime('40')}> 40m</button>
+                        <button onClick={() => getTime(10)}> 10m</button>
+                        <button onClick={() => getTime(20)}> 20m</button>
+                        <button onClick={() => getTime(30)}> 30m</button>
+                        <button onClick={() => getTime(40)}> 40m</button>
                     </div>
                 </div>
                 <div className='exercise-details'>
